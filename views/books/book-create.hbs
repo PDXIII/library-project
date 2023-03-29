@@ -1,0 +1,29 @@
+<form method="POST" action="/books">
+  <label>
+    Title:
+    <input name="title" type="text" />
+
+  </label>
+  <label>
+    Description:
+    <textarea name="description" type="text"></textarea>
+
+  </label>
+  <label>
+    Author:
+    <select name="author">
+      <option value=""></option>
+      {{#each authors}}
+        <option value="{{this._id}}"> {{this.name}}</option>
+      {{/each}}
+    </select>
+
+  </label>
+  <label>
+    Rating:
+    <input name="rating" type="number" min="1" , max="10" />
+
+  </label>
+
+  <button type="submit">Submit</button>
+</form>
